@@ -1,0 +1,36 @@
+{
+  "name": "w",
+  "version": "1.0.0",
+  "description": "新版本支持0配置，但是限制较多  \r 默认入口文件是 ./src/index.js  \r 默认输出到 ./dist/main.js\r ### 安装\r npm i webpack webpack-cli -D\r ### 2.1\r webpack 主要用于web打包，nodejs程序不需要，但是也可以打包。   \r 它同时支持 commonjs 和 ES6 module，不需要配置即可使用，只需要保证一致性。\r ### wepack 配置\r 入口，输出，loader, 插件\r #### 入口\r entry: \"\"\r #### 输出\r 必须是绝对路径  \r path.resolve 将相对路径转为绝对路径   \r path.join(__dirname,'./') 拼接路径得到绝对路径.  \r ___\r 需要在最外层设置 mode(模式) 默认是 production ,会压缩代码,development 则不会压缩代码.\r #### 使用自定义配置打包\r npx webpack --config webpack.custom.config.js",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack --config webpack.config.js",
+    "build:prod": "webpack --config webpack.prod.config.js",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.0"
+  }
+}
